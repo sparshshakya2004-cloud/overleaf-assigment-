@@ -1,0 +1,39 @@
+
+\subsection{Comparison: Primary Memory vs. Secondary Memory}
+The fundamental difference between these two types of memory lies in the balance of speed versus persistence. Primary memory acts as the "workspace," while secondary memory serves as the "storage warehouse."
+
+\renewcommand{\arraystretch}{1.8}
+\begin{longtable}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+\rowcolor{gray!20} \textbf{Feature} & \textbf{Primary Memory (RAM)} & \textbf{Secondary Memory (HDD/SSD)} \\ \hline
+\endfirsthead 
+
+\textbf{Nature} & Volatile (Data is lost when power is turned off). & Non-volatile (Data is saved permanently). \\ \hline
+\textbf{Speed} & Extremely fast; accessed directly by the CPU. & Much slower compared to primary memory. \\ \hline
+\textbf{Capacity} & Limited (usually 8GB to 64GB in PCs). & Very large (usually 256GB to several TBs). \\ \hline
+\textbf{Cost} & Expensive per gigabyte. & Very cheap per gigabyte. \\ \hline
+\textbf{Accessibility} & Directly accessible by the processor via the data bus. & Not directly accessible; must be loaded into RAM first. \\ \hline
+\textbf{Purpose} & Holds data currently being used by the CPU. & Acts as long-term storage for files and OS. \\ \hline
+\end{longtable}
+
+\newpage
+
+\subsection{Comparison: Program vs. Process}
+In Operating System studies, a "Program" is considered a passive entity, while a "Process" is the active execution of those instructions.
+
+% [Image of process state transition diagram showing New, Ready, Running, Waiting, and Terminated states]
+
+\renewcommand{\arraystretch}{1.8}
+\begin{longtable}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+\rowcolor{gray!20} \textbf{Feature} & \textbf{Program} & \textbf{Process} \\ \hline
+\endfirsthead 
+
+\textbf{Definition} & A passive entity; a set of instructions stored on a disk. & An active entity; a program currently in execution. \\ \hline
+\textbf{Life Span} & Exists until it is manually deleted from the disk. & Exists only as long as the task is running. \\ \hline
+\textbf{Resources} & Occupies only storage space (Secondary Memory). & Requires CPU time, RAM, and I/O resources. \\ \hline
+\textbf{State} & It has no ``state'' other than its file size. & Has various states (Ready, Running, Waiting, Terminated). \\ \hline
+\textbf{Relationship} & One program can be the basis for many processes. & A process cannot exist without a parent program. \\ \hline
+\end{longtable}
+
+% \end{document}

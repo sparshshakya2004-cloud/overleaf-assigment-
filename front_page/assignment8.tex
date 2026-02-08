@@ -1,0 +1,47 @@
+% \documentclass[a4paper,12pt]{article}
+% \usepackage[utf8]{inputenc}
+% \usepackage[margin=1in]{geometry}
+% \usepackage[table]{xcolor} 
+% \usepackage{longtable} 
+% \usepackage{booktabs}  
+
+% \title{\textbf{Assignment 8: Parallel vs. Distributed Systems}}
+% \author{Sparsh Shakya, BETN1AI24036}
+% \date{\today}
+
+% % \begin{document}
+
+% \maketitle
+
+\subsection{Introduction}
+Modern computing relies on two main architectural paradigms: Parallel Systems, which optimize performance within a single machine, and Distributed Systems, which provide scalability across global networks.
+
+\subsection{Comparison of System Features}
+
+\renewcommand{\arraystretch}{2} 
+\begin{longtable}{|p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\rowcolor{gray!20} \textbf{Feature} & \textbf{Parallel System (NVIDIA CUDA)} & \textbf{Distributed System (Google Spanner)} \\ \hline
+\endfirsthead 
+
+\hline
+\rowcolor{gray!20} \textbf{Feature} & \textbf{Parallel System (NVIDIA CUDA)} & \textbf{Distributed System (Google Spanner)} \\ \hline
+\endhead 
+
+\textbf{Architecture} & Tightly coupled; thousands of cores in one GPU. & Loosely coupled; thousands of servers in different data centers. \\ \hline
+
+\textbf{Memory} & \textbf{Shared Memory:} All cores share the same VRAM. & \textbf{Independent Memory:} Each server has its own RAM/Storage. \\ \hline
+
+\textbf{Communication} & High-speed internal bus (NVLink/PCIe). & Network protocols (TCP/IP, RPC) over the internet. \\ \hline
+
+\textbf{Scalability} & Vertical (Adding a more powerful GPU). & Horizontal (Adding more servers to the cluster). \\ \hline
+
+\textbf{Fault Tolerance} & Low; if the GPU fails, the whole task stops. & High; if one server fails, others take over immediately. \\ \hline
+
+\textbf{Primary Goal} & \textbf{Speed:} Solving complex math problems faster. & \textbf{Reliability:} Managing global data without downtime. \\ \hline
+
+\end{longtable}
+
+
+
+% \end{document}

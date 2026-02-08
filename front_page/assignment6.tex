@@ -1,0 +1,44 @@
+% \documentclass[a4paper,12pt]{article}
+
+% % --- Essential Packages ---
+% \usepackage[utf8]{inputenc}
+% \usepackage[margin=1in]{geometry}
+% \usepackage[table]{xcolor} 
+% \usepackage{longtable} 
+% \usepackage{booktabs}  
+
+% \title{\textbf{Assignment 6: Multitasking vs. Multithreading in Windows 11}}
+% \author{Sparsh Shakya, BETN1AI24036}
+% \date{\today}
+
+% % \begin{document}
+
+% \maketitle
+
+\subsection{Comparison Table}
+
+\renewcommand{\arraystretch}{2} 
+\begin{longtable}{|p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\rowcolor{blue!10} \textbf{Parameter} & \textbf{Multitasking} & \textbf{Multithreading} \\ \hline
+\endfirsthead 
+
+\hline
+\rowcolor{blue!10} \textbf{Parameter} & \textbf{Multitasking} & \textbf{Multithreading} \\ \hline
+\endhead 
+
+\textbf{Definition} & Allows multiple processes (apps) to run concurrently. & Allows multiple threads within a single process to run. \\ \hline
+
+\textbf{Memory} & Each process has its own separate memory space. & Threads share the memory space of the parent process. \\ \hline
+
+\textbf{Isolation} & High; if one app crashes, others usually keep running. & Low; if one thread crashes, the entire process may crash. \\ \hline
+
+\textbf{Context Switching} & Slower; Windows must save and load entire process states. & Faster; switching between threads is much lighter for the CPU. \\ \hline
+
+\textbf{Communication} & Uses Inter-Process Communication (IPC) like pipes or sockets. & Threads communicate easily because they share variables/memory. \\ \hline
+
+\textbf{Example (Windows)} & Running Word and Excel at the same time. & Word checking grammar in one thread while you type in another. \\ \hline
+
+\end{longtable}
+
+% \end{document}

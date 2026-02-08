@@ -1,0 +1,36 @@
+
+
+\subsection{Various Views of Operating Systems}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{User View:} The user wants convenience, ease of use, and good performance. They don't care how the hardware works; they just want their apps to run smoothly.
+    \item \textbf{System View:} From the computer's perspective, the OS is a Resource Allocator. It manages CPU time, memory space, and file storage, ensuring that different programs don't crash into each other.
+    \item \textbf{Architect View:} The designer sees the OS as a Control Program that manages the execution of user programs to prevent errors and improper use of the computer.
+\end{itemize}
+
+% \newpage
+
+\subsection{Virtual Machines (VM)}
+Virtual machines (VMs) are the chameleons of computing—software-based "computers" that run inside your physical device, completely isolated from your main operating system. Think of it like having a "computer-in-a-window" that lets you test risky software, run apps from different OSs, or scale massive web services without buying new hardware
+
+\subsection{Key Components}
+\begin{itemize}
+    \item \textbf{The Host:} Your physical laptop or server that provides the actual CPU, RAM, and storage.
+    \item \textbf{The Guest:} The virtual computer (VM) living inside the host, running its own independent operating system.
+    \item \textbf{The Hypervisor:}The "manager" software (like VMware, VirtualBox, or Hyper-V) that translates requests between the guest and the host’s hardware.
+\end{itemize}
+
+\subsection{The Hypervisor}
+The Hypervisor is the software that creates and runs virtual machines. There are two types:
+\begin{enumerate}
+    \item \textbf{Type 1 (Bare Metal):} Runs directly on the hardware (e.g., VMware ESXi).
+    \item \textbf{Type 2 (Hosted):} Runs on top of an existing OS (e.g., Oracle VirtualBox).
+\end{enumerate}
+
+\subsection{Benefits of Virtualization}
+\begin{itemize}
+    \item \textbf{Consolidation:} Running multiple servers on one physical machine.
+    \item \textbf{Security:} Isolation of environments for testing.
+    \item \textbf{Legacy Support:} Running old software (like MS-DOS) on modern Windows.
+\end{itemize}
+
+

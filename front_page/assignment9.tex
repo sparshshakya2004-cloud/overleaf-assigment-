@@ -1,0 +1,59 @@
+% \documentclass[a4paper,12pt]{article}
+
+% % --- Essential Packages ---
+% \usepackage[utf8]{inputenc}
+% \usepackage[margin=1in]{geometry}
+% \usepackage[table]{xcolor} 
+% \usepackage{longtable} 
+% \usepackage{booktabs}  
+
+% \title{\textbf{Assignment 9: Study and Comparison of Operating System Structures}}
+% \author{Sparsh Shakya, BETN1AI24036}
+% \date{\today}
+
+% % \begin{document}
+
+% \maketitle
+
+\subsection{Introduction}
+Operating system structures define how the internal components of the OS—like the kernel, drivers, and file systems—are organized and how they communicate with the hardware and applications.
+
+\subsection{Comparison of Operating System Structures}
+
+\renewcommand{\arraystretch}{1.8}
+\begin{longtable}{|p{2.5cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|}
+\hline
+\rowcolor{gray!20} \textbf{Structure} & \textbf{Description} & \textbf{Pros} & \textbf{Cons} \\ \hline
+\endfirsthead 
+
+\hline
+\rowcolor{gray!20} \textbf{Structure} & \textbf{Description} & \textbf{Pros} & \textbf{Cons} \\ \hline
+\endhead 
+
+\textbf{Monolithic} & All OS services run in a single, large kernel. & High performance due to minimal overhead. & Difficult to debug; one failure crashes the system. \\ \hline
+
+\textbf{Layered} & OS is broken into layers; each built on top of lower layers. & Simple to debug and maintain. & Performance overhead from multi-layer requests. \\ \hline
+
+\textbf{Microkernel} & Moves non-essential services to "user space." & Highly stable and secure; kernel survives service failure. & Performance lag due to frequent IPC. \\ \hline
+
+\textbf{Hybrid} & A combination of Monolithic and Microkernel structures. & Balances speed with modularity. & Complex to design and manage. \\ \hline
+
+\end{longtable}
+
+\newpage
+
+\subsection{Deep Dive into the Structures}
+
+\subsubsection{Monolithic Structure (The ``All-in-One'')}
+
+In this design, there is no separation between the different tasks of the OS. Everything (memory management, file systems, etc.) is packed into one big program. It’s like a studio apartment—it's very fast to get from one area to another, but a failure in one part affects the whole system. \textit{Examples: Original Linux, MS-DOS.}
+
+\subsubsection{Microkernel Structure (The ``Modular'')}
+
+This design keeps the kernel as tiny as possible, handling only essential tasks like communication. Services like printer drivers run as separate user programs. This is the gold standard for Real-Time OS and high-security environments. \textit{Examples: QNX, Mach.}
+
+\subsubsection{Hybrid Structure (The ``Modern Standard'')}
+
+Most modern operating systems are hybrids. For example, macOS uses a microkernel for core tasks but includes monolithic code from BSD Unix to ensure apps run fast. It provides stability with raw speed. \textit{Examples: Windows 11, macOS, Android.}
+
+% \end{document}

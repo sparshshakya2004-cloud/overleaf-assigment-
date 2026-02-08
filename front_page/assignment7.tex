@@ -1,0 +1,48 @@
+% \documentclass[a4paper,12pt]{article}
+
+% % --- Essential Packages ---
+% \usepackage[utf8]{inputenc}
+% \usepackage[margin=1in]{geometry}
+% \usepackage[table]{xcolor} 
+% \usepackage{longtable} 
+% \usepackage{booktabs}  
+
+% \title{\textbf{Assignment 7: Study of QNX Real-Time Operating System}}
+% \author{Sparsh Shakya, BETN1AI24036}
+% \date{\today}
+
+% % \begin{document}
+
+% \maketitle
+
+\subsection{Introduction}
+QNX is a commercial POSIX-compliant real-time operating system (RTOS) based on a microkernel architecture. It is designed for mission-critical applications where failure is not an option, such as in automotive infotainment and medical life-support systems.
+
+\subsection{Characteristics of QNX RTOS}
+
+\renewcommand{\arraystretch}{2} 
+\begin{longtable}{|p{3.5cm}|p{9.5cm}|}
+\hline
+\rowcolor{gray!20} \textbf{Characteristic} & \textbf{Description} \\ \hline
+\endfirsthead 
+
+\hline
+\rowcolor{gray!20} \textbf{Characteristic} & \textbf{Description} \\ \hline
+\endhead 
+
+\textbf{Microkernel Design} & Only essential services (scheduling, IPC) run in kernel space; all other services run as isolated user-mode processes. \\ \hline
+
+\textbf{Determinism} & Guarantees that system responses to events occur within a strictly defined time limit (Hard Real-Time). \\ \hline
+
+\textbf{High Availability} & Features a "High Availability Manager" that can automatically restart failed processes or drivers without rebooting the OS. \\ \hline
+
+\textbf{Priority Preemption} & Ensures that the highest-priority task always gets the CPU immediately, interrupting lower-priority tasks if necessary. \\ \hline
+
+\textbf{Message Passing} & Uses a robust Inter-Process Communication (IPC) system based on message passing to coordinate between isolated processes. \\ \hline
+
+\textbf{Scalability} & Can be scaled down for tiny embedded sensors or scaled up for complex networking equipment. \\ \hline
+
+\end{longtable}
+
+
+% \end{document}

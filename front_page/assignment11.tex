@@ -1,0 +1,45 @@
+
+\subsection{Study of the Unix Kernel}
+The Unix Kernel is a classic example of a Monolithic design, though it is highly modular in nature. It is the core software that manages the hardware and provides a platform for applications.
+
+\subsection*{Key Components of the Unix Kernel:}
+\begin{itemize}
+    \item \textbf{Process Management:} It handles the creation, scheduling, and termination of processes. It uses a "Scheduler" to decide which process gets the CPU and for how long.
+    \item \textbf{Memory Management:} It allocates memory to processes and ensures that one process doesn't overwrite the memory of another (Memory Protection).
+    \item \textbf{File System Management:} Unix treats everything as a file (including hardware devices). The kernel manages the data structure on the disk and handles read/write requests.
+    \item \textbf{System Calls:} This is the interface between the user programs and the kernel. If an app wants to open a file, it must send a "System Call" to the kernel to get permission.
+\end{itemize}
+
+\subsection*{The "Two-Part" Philosophy:}
+The Unix system is traditionally divided into two parts:
+\begin{itemize}
+    \item \textbf{The Kernel:} Which handles the hardware and low-level tasks.
+    \item \textbf{The Shell:} The environment that sits around the kernel, taking user commands and passing them to the kernel for execution.
+\end{itemize}
+
+\newpage
+
+\subsection{Comparison of Various Types of Kernels}
+Different kernels are designed based on whether the priority is speed, size, or reliability.
+
+
+
+\renewcommand{\arraystretch}{2}
+\begin{longtable}{|p{2.5cm}|p{4cm}|p{3.5cm}|p{3cm}|}
+\hline
+\rowcolor{gray!20} \textbf{Kernel Type} & \textbf{Description} & \textbf{Key Characteristic} & \textbf{Example} \\ \hline
+\endfirsthead
+
+\textbf{Monolithic Kernel} & The entire OS runs in the kernel space. All drivers, memory management, and file systems are one big block. & Fastest performance because everything is in one place. & Linux, BSD, Unix. \\ \hline
+
+\textbf{Microkernel} & Only the bare essentials (IPC, basic memory) are in the kernel. Everything else (drivers, etc.) runs in "User Space." & High Stability; if a driver crashes, the system stays up. & QNX, L4, Mach. \\ \hline
+
+\textbf{Hybrid Kernel} & A mix of both. It looks like a microkernel but runs some code as monolithic to improve speed. & Balance of speed and modularity. & Windows NT, macOS (XNU). \\ \hline
+
+\textbf{Exokernel} & A minimalist kernel that gives applications direct access to hardware resources. & Ultra-flexible for developers to optimize their own apps. & MIT Exokernel. \\ \hline
+
+\textbf{Nanokernel} & A tiny kernel that only supports hardware interrupts and nothing else. & Extremely small; usually for specialized embedded systems. & KeyKOS. \\ \hline
+
+\end{longtable}
+
+% \end{document}

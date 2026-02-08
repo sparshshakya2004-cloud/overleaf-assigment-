@@ -1,0 +1,36 @@
+
+
+\subsection{Introduction}
+Processing systems define how an Operating System handles tasks. Serial processing represents the most basic form of computing, while Batch processing introduced the concept of "batches" to optimize CPU usage and reduce idle time.
+
+\subsection{Comparison Table}
+
+\renewcommand{\arraystretch}{2} 
+\begin{longtable}{|p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\rowcolor{blue!10} \textbf{Parameter} & \textbf{Serial Processing} & \textbf{Batch Processing} \\ \hline
+\endfirsthead 
+
+\hline
+\rowcolor{blue!10} \textbf{Parameter} & \textbf{Serial Processing} & \textbf{Batch Processing} \\ \hline
+\endhead 
+
+\textbf{Definition} & Jobs are executed one by one in the order they are received. & Similar jobs are grouped together and executed as a single batch. \\ \hline
+
+\textbf{User Interaction} & High; the user interacts directly with the system for each job. & Low; users submit jobs to an operator and wait for the results. \\ \hline
+
+\textbf{Efficiency} & Low; the CPU sits idle while the user sets up the next job. & Higher; reduces setup time between jobs of the same type. \\ \hline
+
+\textbf{Debugging} & Easier; the user can see errors as they happen in real-time. & Difficult; errors are only seen after the entire batch is processed. \\ \hline
+
+\textbf{CPU Idle Time} & High; significant time is wasted during manual setup. & Minimal; jobs are automatically loaded one after another. \\ \hline
+
+\textbf{Resource Usage} & Uses minimal memory as only one job is active. & Requires more memory to store batches and the Monitor program. \\ \hline
+
+\textbf{Examples} & Early mainframe computers, simple calculators. & Payroll systems, bank statement processing. \\ \hline
+
+\end{longtable}
+
+
+
+% \end{document}
